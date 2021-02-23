@@ -1,0 +1,232 @@
+---
+proxies:
+- name: jia
+  type: ss
+  server: 10.10.10.2
+  port: 11532
+  cipher: aes-128-gcm
+  password: '111111'
+  udp: false
+- name: wang
+  type: ss
+  server: 10.10.10.3
+  port: 15133
+  cipher: aes-128-gcm
+  password: aa123456
+  udp: false
+proxy-groups:
+- name: Auto - UrlTest
+  type: url-test
+  proxies:
+  - jia
+  - wang
+  url: https://cp.cloudflare.com/generate_204
+  interval: '600'
+  tolerance: '150'
+- name: Proxy
+  type: select
+  proxies:
+  - Auto - UrlTest
+  - DIRECT
+  - jia
+  - wang
+- name: Domestic
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+- name: Others
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - Domestic
+- name: AdBlock
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+  - Proxy
+- name: AsianTV
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - jia
+  - wang
+rules:
+- DOMAIN-KEYWORD,tracker,DIRECT
+- DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
+- DOMAIN-KEYWORD,torrent,DIRECT
+- DOMAIN-KEYWORD,peer_id=,DIRECT
+- DOMAIN-KEYWORD,info_hash,DIRECT
+- DOMAIN-KEYWORD,get_peers,DIRECT
+- DOMAIN-KEYWORD,find_node,DIRECT
+- DOMAIN-KEYWORD,BitTorrent,DIRECT
+- DOMAIN-KEYWORD,announce_peer,DIRECT
+- DOMAIN-SUFFIX,acfun.cn,Proxy
+- DOMAIN-SUFFIX,acfun.com,Proxy
+- DOMAIN-SUFFIX,aixifan.com,Proxy
+- DOMAIN-SUFFIX,acgvideo.com,Proxy
+- DOMAIN-SUFFIX,bilibili.com,Proxy
+- DOMAIN-SUFFIX,hdslb.com,Proxy
+- DOMAIN-SUFFIX,hitv.com,Proxy
+- DOMAIN-SUFFIX,hunantv.com,Proxy
+- DOMAIN-SUFFIX,mgtv.com,Proxy
+- DOMAIN-SUFFIX,cmvideo.cn,Proxy
+- DOMAIN-SUFFIX,migu.cn,Proxy
+- DOMAIN-SUFFIX,miguvideo.com,Proxy
+- DOMAIN-SUFFIX,iqiyi.com,Proxy
+- DOMAIN-SUFFIX,iqiyipic.com,Proxy
+- DOMAIN-SUFFIX,qy.net,Proxy
+- DOMAIN-SUFFIX,sohu.com,Proxy
+- DOMAIN-SUFFIX,sohu.com.cn,Proxy
+- DOMAIN-SUFFIX,itc.cn,Proxy
+- DOMAIN-SUFFIX,v-56.com,Proxy
+- DOMAIN-SUFFIX,video.qq.com,Proxy
+- DOMAIN-SUFFIX,soku.com,Proxy
+- DOMAIN-SUFFIX,youku.com,Proxy
+- DOMAIN-SUFFIX,ykimg.com,Proxy
+- DOMAIN-SUFFIX,xiami.com,Proxy
+- DOMAIN-SUFFIX,xiami.net,Proxy
+- DOMAIN-SUFFIX,music.126.net,Proxy
+- DOMAIN-SUFFIX,music.163.com,Proxy
+- DOMAIN-SUFFIX,qqmusic.qq.com,Proxy
+- DOMAIN-SUFFIX,y.qq.com,Proxy
+- DOMAIN,aqqmusic.tc.qq.com,Proxy
+- DOMAIN-SUFFIX,kugou.com,Proxy
+- DOMAIN-SUFFIX,kuwo.cn,Proxy
+- DOMAIN-SUFFIX,koowo.com,Proxy
+- DOMAIN-SUFFIX,qianqian.com,Proxy
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- GEOIP,CN,DIRECT
+- DST-PORT,80,Others
+- DST-PORT,443,Others
+- DST-PORT,22,Others
+- MATCH,DIRECT
+redir-port: 7892
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 192.168.1.1:9090
+secret: '123456'
+bind-address: 192.168.1.1
+external-ui: "/usr/share/openclash/dashboard"
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+  fake-ip-filter:
+  - "*.lan"
+  - time.windows.com
+  - time.nist.gov
+  - time.apple.com
+  - time.asia.apple.com
+  - "*.ntp.org.cn"
+  - "*.openwrt.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - time.ustc.edu.cn
+  - pool.ntp.org
+  - ntp.ubuntu.com
+  - ntp.aliyun.com
+  - ntp1.aliyun.com
+  - ntp2.aliyun.com
+  - ntp3.aliyun.com
+  - ntp4.aliyun.com
+  - ntp5.aliyun.com
+  - ntp6.aliyun.com
+  - ntp7.aliyun.com
+  - time1.aliyun.com
+  - time2.aliyun.com
+  - time3.aliyun.com
+  - time4.aliyun.com
+  - time5.aliyun.com
+  - time6.aliyun.com
+  - time7.aliyun.com
+  - "*.time.edu.cn"
+  - time1.apple.com
+  - time2.apple.com
+  - time3.apple.com
+  - time4.apple.com
+  - time5.apple.com
+  - time6.apple.com
+  - time7.apple.com
+  - time1.google.com
+  - time2.google.com
+  - time3.google.com
+  - time4.google.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - localhost.ptlogin2.qq.com
+  - "+.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.microsoft.com
+  - "+.xboxlive.com"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  nameserver:
+  - 114.114.114.114
+  - 119.29.29.29
+  fallback:
+  - https://cloudflare-dns.com/dns-query
+  - https://dns.google/dns-query
+  - https://1.1.1.1/dns-query
+  - tls://8.8.8.8:853
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
+    - 240.0.0.0/4
+    - 255.255.255.255/32
+    domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    - "+.githubusercontent.com"
+ipv6: true
+profile:
+  store-selected: true
