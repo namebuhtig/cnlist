@@ -1,7 +1,0 @@
-Cookie1="pt_key=AAJgEBgJADDSisX4f5EUUF8z_IPUwvavH_3-IbSrvU6Q5VAO1Q-gv3s75ntGLYOfqT5b22YNY_g;pt_pin=403809607_m;"
-Cookie2="pt_key=AAJgECmbADBpx-b8GwlN7LMcWePh9KhU5T2ZRJhsBClpGDpf1JJQTpXT8ZPq4jpZnIKPgyXFBt0;pt_pin=%E9%9C%87%E4%B8%9C%E5%9B%BD%E9%99%851937;"
-Cookie3="pt_key=AAJgEsqjADBywwl1DG9NE0__4Bug4FveSgOYb-LLfXd1F6XJnkgNhlLjHGVkCGdFwI2Chu_NLWw;pt_pin=549655790_m;"
-Cookie4="pt_key=AAJgETh4ADBKkd5xwSu6nIqeG5mnpyxH-7geSDO2n-zhPNAd_FIxNg4vOJJUNAXd54lzK5keVWY;pt_pin=jd_726aac2e92ec0;"
-Cookie5="pt_key=AAJgETm-ADDJt03KWLMfe8uYHX4LzbJPG5jUGMBFazKRzrvJS728Z7fnVJ64lTx_rcmyTADZqEU;pt_pin=jd_yYrvyhauUowj;"
-Cookie6="pt_key=AAJgEsw4ADAgXAHLRRDAFE-JjFVARkhTuqkb7GGYDsdx-Tt4AGX47vObWiIbrGh7qlqfQ_9RRr4;pt_pin=wdEwqllKVpFkvZ;"
-Cookie7="pt_key=AAJgFVBrADBiJpb6esbLBOw5BLT7rvPaJiOh98rsvQW4TUY9Gp-Is6ElDIpJHYJ8nwgoa5TdYG4;pt_pin=jd_jCDpUdyHuNQd;"
