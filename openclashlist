@@ -15,143 +15,69 @@ proxy-groups:
       - DIRECT
       - home
       - wang
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - home
-      - wang
-      - DIRECT
-  - name: 🌍 国外媒体
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - home
-      - wang
-      - DIRECT
-  - name: 📲 电报信息
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - home
-      - wang
-      - DIRECT
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🚀 节点选择
-      - home
-      - wang
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - home
-      - wang
-  - name: 📢 谷歌FCM
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - home
-      - wang
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - DIRECT
-      - home
-      - wang
 rules:
-payload:
   # (Video)
   # > Acfun
-  - DOMAIN-SUFFIX,acfun.cn, ♻️ 自动选择
-  - DOMAIN-SUFFIX,aixifan.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,acfun.cn, 🚀 节点选择
+  - DOMAIN-SUFFIX,aixifan.com, 🚀 节点选择
   # > bilibili
-  - DOMAIN-SUFFIX,biliapi.net, ♻️ 自动选择
-  - DOMAIN-SUFFIX,bilibili.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,bilivideo.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,hdslb.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,biliapi.net, 🚀 节点选择
+  - DOMAIN-SUFFIX,bilibili.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,bilivideo.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,hdslb.com, 🚀 节点选择
   # > Tencent Video
-  - DOMAIN-SUFFIX,video.qq.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,i.qq.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,v.qq.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,video.qq.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,i.qq.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,v.qq.com, 🚀 节点选择
   # > iQiyi
-  - DOMAIN-SUFFIX,iqiyi.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,71edge.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,iqiyi.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,71edge.com, 🚀 节点选择
   # > Youku
-  - DOMAIN-SUFFIX,soku.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,youku.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,ykimg.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,soku.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,youku.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,ykimg.com, 🚀 节点选择
   # > XiGua
-  - DOMAIN-SUFFIX,ixigua.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,snssdk.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,ixigua.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,snssdk.com, 🚀 节点选择
   # > HunanTV
-  - DOMAIN-SUFFIX,hitv.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,hunantv.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,mgtv.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,hitv.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,hunantv.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,mgtv.com, 🚀 节点选择
   # > Le
-  - DOMAIN-SUFFIX,le.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,le.com, 🚀 节点选择
   # > PPLive
-  - DOMAIN-SUFFIX,pplive.cn, ♻️ 自动选择
-  - DOMAIN-SUFFIX,pptv.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,pplive.cn, 🚀 节点选择
+  - DOMAIN-SUFFIX,pptv.com, 🚀 节点选择
   # > Sohu Video
-  - DOMAIN-SUFFIX,itc.cn, ♻️ 自动选择
-  - DOMAIN-SUFFIX,sohu.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,itc.cn, 🚀 节点选择
+  - DOMAIN-SUFFIX,sohu.com, 🚀 节点选择
   # > Migu Video
-  - DOMAIN-SUFFIX,cmvideo.cn, ♻️ 自动选择
-  - DOMAIN-SUFFIX,miguvideo.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,cmvideo.cn, 🚀 节点选择
+  - DOMAIN-SUFFIX,miguvideo.com, 🚀 节点选择
 
   # (Music)
   # > QQ Music
-  - DOMAIN-SUFFIX,music.qq.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,music.tc.qq.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,qqmusic.qq.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,tencentmusic.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,y.qq.com, ♻️ 自动选择
-  - DOMAIN,aqqmusic.tc.qq.com, ♻️ 自动选择
-  - DOMAIN,moo.qq.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,music.qq.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,music.tc.qq.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,qqmusic.qq.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,tencentmusic.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,y.qq.com, 🚀 节点选择
+  - DOMAIN,aqqmusic.tc.qq.com, 🚀 节点选择
+  - DOMAIN,moo.qq.com, 🚀 节点选择
   # > China Music Corp
-  - DOMAIN-SUFFIX,kuwo.cn, ♻️ 自动选择
-  - DOMAIN-SUFFIX,kugou.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,kuwo.cn, 🚀 节点选择
+  - DOMAIN-SUFFIX,kugou.com, 🚀 节点选择
   # > Netease Cloud Music
-  - DOMAIN-SUFFIX,music.163.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,music.126.net, ♻️ 自动选择
-  - DOMAIN,mam.netease.com, ♻️ 自动选择
-  - DOMAIN,api.iplay.163.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,music.163.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,music.126.net, 🚀 节点选择
+  - DOMAIN,mam.netease.com, 🚀 节点选择
+  - DOMAIN,api.iplay.163.com, 🚀 节点选择
   # > Qianqian Music
-  - DOMAIN-SUFFIX,qianqian.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,taihe.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,qianqian.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,taihe.com, 🚀 节点选择
   # > Migu Music
-  - DOMAIN-SUFFIX,migu.cn, ♻️ 自动选择
+  - DOMAIN-SUFFIX,migu.cn, 🚀 节点选择
   # > Xiaomi
-  - DOMAIN-SUFFIX,ai.xiaomi.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,music.xiaomi.com, ♻️ 自动选择
-  - DOMAIN-SUFFIX,dmhmusic.com, ♻️ 自动选择
+  - DOMAIN-SUFFIX,ai.xiaomi.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,music.xiaomi.com, 🚀 节点选择
+  - DOMAIN-SUFFIX,dmhmusic.com, 🚀 节点选择
