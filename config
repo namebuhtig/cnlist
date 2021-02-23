@@ -99,7 +99,7 @@ rules:
 - DOMAIN-SUFFIX,koowo.com,Proxy
 - DOMAIN-SUFFIX,qianqian.com,Proxy
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- GEOIP,CN,DIRECT
+- GEOIP,CN,Others
 - DST-PORT,80,Others
 - DST-PORT,443,Others
 - DST-PORT,22,Others
