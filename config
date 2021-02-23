@@ -69,6 +69,9 @@ rules:
 - DOMAIN-SUFFIX,aixifan.com,Proxy
 - DOMAIN-SUFFIX,acgvideo.com,Proxy
 - DOMAIN-SUFFIX,bilibili.com,Proxy
+- DOMAIN-SUFFIX,bilivideo.com,Proxy
+- DOMAIN-SUFFIX,biliapi.com,Proxy
+- DOMAIN-SUFFIX,biliapi.net,Proxy
 - DOMAIN-SUFFIX,hdslb.com,Proxy
 - DOMAIN-SUFFIX,hitv.com,Proxy
 - DOMAIN-SUFFIX,hunantv.com,Proxy
