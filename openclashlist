@@ -15,7 +15,36 @@ proxy-groups:
       - DIRECT
       - home
       - wang
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - JIA
+      - WANG
+      
 rules:
+ - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
+ - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
+ - DOMAIN-SUFFIX,local,🎯 全球直连
+ - DOMAIN-SUFFIX,localhost,🎯 全球直连
+ - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
+ - IP-CIDR,100.64.0.0/10,🎯 全球直连,no-resolve
+ - IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve
+ - IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
+ - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
+ - IP-CIDR,198.18.0.0/16,🎯 全球直连,no-resolve
+ - IP-CIDR6,::1/128,🎯 全球直连,no-resolve
+ - IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
+ - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
+ - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
   # (Video)
   # > Acfun
   - DOMAIN-SUFFIX,acfun.cn, 🚀 节点选择
