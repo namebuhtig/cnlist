@@ -68,6 +68,12 @@ rules:
 - DOMAIN-SUFFIX,acfun.com,Proxy
 - DOMAIN-SUFFIX,aixifan.com,Proxy
 - DOMAIN-SUFFIX,acgvideo.com,Proxy
+- DOMAIN-SUFFIX,acg.tv,Proxy
+- DOMAIN-SUFFIX,b23.tv,Proxy
+- DOMAIN-SUFFIX,biligame.com,Proxy
+- DOMAIN-SUFFIX,biligame.net,Proxy
+- DOMAIN-SUFFIX,im9.com,Proxy
+- DOMAIN-SUFFIX,smtcdns.net,Proxy
 - DOMAIN-SUFFIX,bilibili.com,Proxy
 - DOMAIN-SUFFIX,bilivideo.com,Proxy
 - DOMAIN-SUFFIX,biliapi.com,Proxy
