@@ -76,7 +76,6 @@ rules:
 - DOMAIN-SUFFIX,biligame.com,Proxy
 - DOMAIN-SUFFIX,biligame.net,Proxy
 - DOMAIN-SUFFIX,im9.com,Proxy
-- DOMAIN-SUFFIX,smtcdns.net,Proxy
 - DOMAIN-SUFFIX,bilibili.com,Proxy
 - DOMAIN-SUFFIX,bilivideo.com,Proxy
 - DOMAIN-SUFFIX,biliapi.com,Proxy
