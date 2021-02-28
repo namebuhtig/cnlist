@@ -57,6 +57,7 @@ proxy-groups:
 rules:
 - User-Agent,bili*,Proxy
 - User-Agent,Bilibili*,Proxy
+- User-Agent,云视听小电视*,Proxy
 - DOMAIN-KEYWORD,tracker,DIRECT
 - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
 - DOMAIN-KEYWORD,torrent,DIRECT
