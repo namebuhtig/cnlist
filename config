@@ -55,6 +55,8 @@ proxy-groups:
   - jia
   - wang
 rules:
+- User-Agent,bili*,Proxy
+- User-Agent,Bilibili*,Proxy
 - DOMAIN-KEYWORD,tracker,DIRECT
 - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
 - DOMAIN-KEYWORD,torrent,DIRECT
@@ -64,6 +66,8 @@ rules:
 - DOMAIN-KEYWORD,find_node,DIRECT
 - DOMAIN-KEYWORD,BitTorrent,DIRECT
 - DOMAIN-KEYWORD,announce_peer,DIRECT
+- DOMAIN-SUFFIX,ipip.net,Proxy
+- DOMAIN-SUFFIX,ip.sb,Proxy
 - DOMAIN-SUFFIX,acfun.cn,Proxy
 - DOMAIN-SUFFIX,acfun.com,Proxy
 - DOMAIN-SUFFIX,aixifan.com,Proxy
