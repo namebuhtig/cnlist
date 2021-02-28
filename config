@@ -212,10 +212,6 @@ dns:
   - https://1.1.1.1/dns-query
   - tls://8.8.8.8:853
   fallback:
-  - 114.114.114.114
-  - 119.29.29.29
-  - 223.5.5.5
-  - 180.76.76.76  
   fallback-filter:
     geoip: false
     ipcidr:
@@ -236,10 +232,6 @@ dns:
     - 240.0.0.0/4
     - 255.255.255.255/32
     domain:
-    - "+.google.com"
-    - "+.facebook.com"
-    - "+.youtube.com"
-    - "+.githubusercontent.com"
 ipv6: true
 profile:
   store-selected: true
