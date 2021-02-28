@@ -66,7 +66,7 @@ rules:
 - DOMAIN-KEYWORD,find_node,DIRECT
 - DOMAIN-KEYWORD,BitTorrent,DIRECT
 - DOMAIN-KEYWORD,announce_peer,DIRECT
-- DOMAIN-SUFFIX,ipip.net,Proxy
+- DOMAIN-SUFFIX,myip.ipip.net,Proxy
 - DOMAIN-SUFFIX,ip.sb,Proxy
 - DOMAIN-SUFFIX,acfun.cn,Proxy
 - DOMAIN-SUFFIX,acfun.com,Proxy
