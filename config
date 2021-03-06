@@ -200,7 +200,7 @@ dns:
   - "*.linksys.com"
   - "*.linksyssmartwifi.com"
   nameserver:
-  - udp://127.0.0.1:6053
+  - http://127.0.0.1:6053
   fallback:
   fallback-filter:
     geoip: false
