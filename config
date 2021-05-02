@@ -55,9 +55,6 @@ proxy-groups:
   - jia
   - wang
 rules:
-- User-Agent,bili*,Proxy
-- User-Agent,Bilibili*,Proxy
-- User-Agent,云视听小电视*,Proxy
 - DOMAIN-KEYWORD,tracker,DIRECT
 - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
 - DOMAIN-KEYWORD,torrent,DIRECT
@@ -200,7 +197,7 @@ dns:
   - "*.linksys.com"
   - "*.linksyssmartwifi.com"
   nameserver:
-  - http://127.0.0.1:6053
+  - 127.0.0.1
   fallback:
   fallback-filter:
     geoip: false
