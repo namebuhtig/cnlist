@@ -1,4 +1,10 @@
 ---
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: silent
+external-controller: 0.0.0.0:9090
 proxies:
 - name: jia
   type: ss
@@ -8,42 +14,11 @@ proxies:
   password: '111111'
   udp: false
 proxy-groups:
-- name: Auto - UrlTest
-  type: url-test
-  proxies:
-  - jia
-  url: https://connect.rom.miui.com/generate_204
-  interval: '600'
-  tolerance: '150'
 - name: Proxy
   type: select
   proxies:
-  - Auto - UrlTest
-  - DIRECT
   - jia
-- name: Domestic
-  type: select
-  proxies:
   - DIRECT
-  - Proxy
-- name: Others
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - Domestic
-- name: AdBlock
-  type: select
-  proxies:
-  - REJECT
-  - DIRECT
-  - Proxy
-- name: AsianTV
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - jia
 rules:
 - DOMAIN-KEYWORD,tracker,DIRECT
 - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
@@ -54,6 +29,9 @@ rules:
 - DOMAIN-KEYWORD,find_node,DIRECT
 - DOMAIN-KEYWORD,BitTorrent,DIRECT
 - DOMAIN-KEYWORD,announce_peer,DIRECT
+- DOMAIN,livew.l.qq.com,Proxy
+- DOMAIN,vd.l.qq.com,Proxy
+- DOMAIN,vi.l.qq.com,Proxy
 - DOMAIN-SUFFIX,acfun.cn,Proxy
 - DOMAIN-SUFFIX,acfun.com,Proxy
 - DOMAIN-SUFFIX,aixifan.com,Proxy
@@ -83,30 +61,24 @@ rules:
 - DOMAIN-SUFFIX,itc.cn,Proxy
 - DOMAIN-SUFFIX,v-56.com,Proxy
 - DOMAIN-SUFFIX,video.qq.com,Proxy
+- DOMAIN-SUFFIX,v.qq.com,Proxy
 - DOMAIN-SUFFIX,soku.com,Proxy
 - DOMAIN-SUFFIX,youku.com,Proxy
 - DOMAIN-SUFFIX,ykimg.com,Proxy
-- DOMAIN-SUFFIX,y.qq.com,Proxy
 - DOMAIN,aqqmusic.tc.qq.com,Proxy
-- DOMAIN,connect.rom.miui.com,Proxy
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- GEOIP,CN,Others
-- DST-PORT,80,Others
-- DST-PORT,443,Others
-- DST-PORT,22,Others
+- GEOIP,CN,DIRECT
+- DST-PORT,80,DIRECT
+- DST-PORT,443,DIRECT
+- DST-PORT,22,DIRECT
 - MATCH,DIRECT
-redir-port: 7892
-port: 7890
-socks-port: 7891
-mixed-port: 7893
-mode: rule
-log-level: silent
-allow-lan: true
-external-controller: 192.168.1.1:9090
-secret: '123456'
-bind-address: 192.168.1.1
-external-ui: "/usr/share/openclash/dashboard"
 dns:
+  nameserver:
+  - https://cloudflare-dns.com/dns-query
+  - tls://dns.google:853
+  - https://1.1.1.1/dns-query
+  - tls://1.1.1.1:853
+  - tls://8.8.8.8:853
   enable: true
   ipv6: true
   enhanced-mode: fake-ip
@@ -186,30 +158,12 @@ dns:
   - heartbeat.belkin.com
   - "*.linksys.com"
   - "*.linksyssmartwifi.com"
-  nameserver:
-  - 8.8.8.8
-  fallback:
-  fallback-filter:
-    geoip: false
-    ipcidr:
-    - 0.0.0.0/8
-    - 10.0.0.0/8
-    - 100.64.0.0/10
-    - 127.0.0.0/8
-    - 169.254.0.0/16
-    - 172.16.0.0/12
-    - 192.0.0.0/24
-    - 192.0.2.0/24
-    - 192.88.99.0/24
-    - 192.168.0.0/16
-    - 198.18.0.0/15
-    - 198.51.100.0/24
-    - 203.0.113.0/24
-    - 224.0.0.0/4
-    - 240.0.0.0/4
-    - 255.255.255.255/32
-    domain:
-ipv6: false
+  - "+.battlenet.com.cn"
+redir-port: 7892
+mixed-port: 7893
+secret: '123456'
+bind-address: "*"
+external-ui: "/usr/share/openclash/dashboard"
+ipv6: true
 profile:
   store-selected: true
-  
