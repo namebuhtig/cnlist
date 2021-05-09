@@ -21,7 +21,6 @@ proxy-groups:
   - Auto - UrlTest
   - DIRECT
   - jia
-  - wang
 - name: Domestic
   type: select
   proxies:
@@ -45,7 +44,6 @@ proxy-groups:
   - DIRECT
   - Proxy
   - jia
-  - wang
 rules:
 - DOMAIN-KEYWORD,tracker,DIRECT
 - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
