@@ -20,150 +20,67 @@ proxy-groups:
   - jia
   - DIRECT
 rules:
-- DOMAIN-KEYWORD,tracker,DIRECT
-- DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
-- DOMAIN-KEYWORD,torrent,DIRECT
-- DOMAIN-KEYWORD,peer_id=,DIRECT
-- DOMAIN-KEYWORD,info_hash,DIRECT
-- DOMAIN-KEYWORD,get_peers,DIRECT
-- DOMAIN-KEYWORD,find_node,DIRECT
-- DOMAIN-KEYWORD,BitTorrent,DIRECT
-- DOMAIN-KEYWORD,announce_peer,DIRECT
-- DOMAIN,livew.l.qq.com,Proxy
-- DOMAIN,vd.l.qq.com,Proxy
-- DOMAIN,vi.l.qq.com,Proxy
-- DOMAIN-SUFFIX,acfun.cn,Proxy
-- DOMAIN-SUFFIX,acfun.com,Proxy
-- DOMAIN-SUFFIX,aixifan.com,Proxy
-- DOMAIN-SUFFIX,acgvideo.com,Proxy
-- DOMAIN-SUFFIX,acg.tv,Proxy
-- DOMAIN-SUFFIX,b23.tv,Proxy
-- DOMAIN-SUFFIX,biligame.com,Proxy
-- DOMAIN-SUFFIX,biligame.net,Proxy
-- DOMAIN-SUFFIX,im9.com,Proxy
-- DOMAIN-SUFFIX,bilibili.com,Proxy
-- DOMAIN-SUFFIX,bilivideo.com,Proxy
-- DOMAIN-SUFFIX,biliapi.com,Proxy
-- DOMAIN-SUFFIX,biliapi.net,Proxy
-- DOMAIN-SUFFIX,snm0516.aisee.tv,Proxy
-- DOMAIN-SUFFIX,hdslb.com,Proxy
-- DOMAIN-SUFFIX,hitv.com,Proxy
-- DOMAIN-SUFFIX,hunantv.com,Proxy
-- DOMAIN-SUFFIX,mgtv.com,Proxy
-- DOMAIN-SUFFIX,cmvideo.cn,Proxy
-- DOMAIN-SUFFIX,migu.cn,Proxy
-- DOMAIN-SUFFIX,miguvideo.com,Proxy
-- DOMAIN-SUFFIX,iqiyi.com,Proxy
-- DOMAIN-SUFFIX,iqiyipic.com,Proxy
-- DOMAIN-SUFFIX,qy.net,Proxy
-- DOMAIN-SUFFIX,sohu.com,Proxy
-- DOMAIN-SUFFIX,sohu.com.cn,Proxy
-- DOMAIN-SUFFIX,itc.cn,Proxy
-- DOMAIN-SUFFIX,v-56.com,Proxy
-- DOMAIN-SUFFIX,video.qq.com,Proxy
-- DOMAIN-SUFFIX,v.qq.com,Proxy
-- DOMAIN-SUFFIX,soku.com,Proxy
-- DOMAIN-SUFFIX,youku.com,Proxy
-- DOMAIN-SUFFIX,ykimg.com,Proxy
-- DOMAIN,aqqmusic.tc.qq.com,Proxy
-- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- GEOIP,CN,DIRECT
-- DST-PORT,80,DIRECT
-- DST-PORT,443,DIRECT
-- DST-PORT,22,DIRECT
-- MATCH,DIRECT
-dns:
-  nameserver:
-  - https://cloudflare-dns.com/dns-query
-  - tls://dns.google:853
-  - https://1.1.1.1/dns-query
-  - tls://1.1.1.1:853
-  - tls://8.8.8.8:853
-  enable: true
-  ipv6: true
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  listen: 0.0.0.0:7874
-  fake-ip-filter:
-  - "*.lan"
-  - time.windows.com
-  - time.nist.gov
-  - time.apple.com
-  - time.asia.apple.com
-  - "*.ntp.org.cn"
-  - "*.openwrt.pool.ntp.org"
-  - time1.cloud.tencent.com
-  - time.ustc.edu.cn
-  - pool.ntp.org
-  - ntp.ubuntu.com
-  - ntp.aliyun.com
-  - ntp1.aliyun.com
-  - ntp2.aliyun.com
-  - ntp3.aliyun.com
-  - ntp4.aliyun.com
-  - ntp5.aliyun.com
-  - ntp6.aliyun.com
-  - ntp7.aliyun.com
-  - time1.aliyun.com
-  - time2.aliyun.com
-  - time3.aliyun.com
-  - time4.aliyun.com
-  - time5.aliyun.com
-  - time6.aliyun.com
-  - time7.aliyun.com
-  - "*.time.edu.cn"
-  - time1.apple.com
-  - time2.apple.com
-  - time3.apple.com
-  - time4.apple.com
-  - time5.apple.com
-  - time6.apple.com
-  - time7.apple.com
-  - time1.google.com
-  - time2.google.com
-  - time3.google.com
-  - time4.google.com
-  - music.163.com
-  - "*.music.163.com"
-  - "*.126.net"
-  - musicapi.taihe.com
-  - music.taihe.com
-  - songsearch.kugou.com
-  - trackercdn.kugou.com
-  - "*.kuwo.cn"
-  - api-jooxtt.sanook.com
-  - api.joox.com
-  - joox.com
-  - y.qq.com
-  - "*.y.qq.com"
-  - streamoc.music.tc.qq.com
-  - mobileoc.music.tc.qq.com
-  - isure.stream.qqmusic.qq.com
-  - dl.stream.qqmusic.qq.com
-  - aqqmusic.tc.qq.com
-  - amobile.music.tc.qq.com
-  - "*.xiami.com"
-  - "*.music.migu.cn"
-  - music.migu.cn
-  - "*.msftconnecttest.com"
-  - "*.msftncsi.com"
-  - localhost.ptlogin2.qq.com
-  - "+.srv.nintendo.net"
-  - "+.stun.playstation.net"
-  - xbox.*.microsoft.com
-  - "+.xboxlive.com"
-  - proxy.golang.org
-  - stun.*.*
-  - stun.*.*.*
-  - heartbeat.belkin.com
-  - "*.linksys.com"
-  - "*.linksyssmartwifi.com"
-  - "+.battlenet.com.cn"
-redir-port: 7892
-mixed-port: 7893
-secret: '123456'
-bind-address: "*"
-external-ui: "/usr/share/openclash/dashboard"
-ipv6: true
-profile:
-  store-selected: true
+ - DOMAIN-KEYWORD,tracker,DIRECT
+ - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
+ - DOMAIN-KEYWORD,torrent,DIRECT
+ - DOMAIN-KEYWORD,peer_id=,DIRECT
+ - DOMAIN-KEYWORD,info_hash,DIRECT
+ - DOMAIN-KEYWORD,get_peers,DIRECT
+ - DOMAIN-KEYWORD,find_node,DIRECT
+ - DOMAIN-KEYWORD,BitTorrent,DIRECT
+ - DOMAIN-KEYWORD,announce_peer,DIRECT
+ - DOMAIN,myip.ipip.net,Proxy
+ - DOMAIN-SUFFIX,livew.l.qq.com,Proxy
+ - DOMAIN-SUFFIX,vd.l.qq.com,Proxy
+ - DOMAIN-SUFFIX,vi.l.qq.com,Proxy
+ - DOMAIN-SUFFIX,v-56.com,Proxy
+# > Acfun
+ - DOMAIN-SUFFIX,acfun.cn,Proxy
+ - DOMAIN-SUFFIX,aixifan.com,Proxy
+ - DOMAIN-SUFFIX,acfun.com,Proxy
+# > bilibili
+ - DOMAIN-SUFFIX,acgvideo.com,Proxy
+ - DOMAIN-SUFFIX,snm0516.aisee.tv,Proxy
+ - DOMAIN-SUFFIX,biliapi.net,Proxy
+ - DOMAIN-SUFFIX,bilibili.com,Proxy
+ - DOMAIN-SUFFIX,bilivideo.com,Proxy
+ - DOMAIN-SUFFIX,hdslb.com,Proxy
+ - DOMAIN-SUFFIX,acg.tv,Proxy
+ - DOMAIN-SUFFIX,b23.tv,Proxy
+ - DOMAIN-SUFFIX,biligame.com,Proxy
+ - DOMAIN-SUFFIX,biligame.net,Proxy
+ - DOMAIN-SUFFIX,im9.com,Proxy
+ - DOMAIN-SUFFIX,biliapi.com,Proxy
+# > Tencent Video
+ - DOMAIN-SUFFIX,video.qq.com,Proxy
+ - DOMAIN-SUFFIX,i.qq.com,Proxy
+ - DOMAIN-SUFFIX,v.qq.com,Proxy
+# > iQiyi
+ - DOMAIN-SUFFIX,iqiyi.com,Proxy
+ - DOMAIN-SUFFIX,iqiyipic.com,Proxy
+ - DOMAIN-SUFFIX,qy.net,Proxy
+ - DOMAIN-SUFFIX,71edge.com,Proxy
+# > Youku
+ - DOMAIN-SUFFIX,soku.com,Proxy
+ - DOMAIN-SUFFIX,youku.com,Proxy
+ - DOMAIN-SUFFIX,ykimg.com,Proxy
+ # > XiGua
+ - DOMAIN-SUFFIX,ixigua.com,Proxy
+ - DOMAIN-SUFFIX,snssdk.com,Proxy
+# > HunanTV
+ - DOMAIN-SUFFIX,hitv.com,Proxy
+ - DOMAIN-SUFFIX,hunantv.com,Proxy
+ - DOMAIN-SUFFIX,mgtv.com,Proxy
+# > Le
+ - DOMAIN-SUFFIX,le.com,Proxy
+# > PPLive
+ - DOMAIN-SUFFIX,pplive.cn,Proxy
+ - DOMAIN-SUFFIX,pptv.com,Proxy
+# > Sohu Video
+ - DOMAIN-SUFFIX,sohu.com,Proxy
+ - DOMAIN-SUFFIX,sohu.com.cn,Proxy
+ - DOMAIN-SUFFIX,itc.cn,Proxy
+# > Migu Video
+ - DOMAIN-SUFFIX,cmvideo.cn,Proxy
+ - DOMAIN-SUFFIX,migu.cn,Proxy
+ - DOMAIN-SUFFIX,miguvideo.com,Proxy
