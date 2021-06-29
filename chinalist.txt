@@ -1,0 +1,55 @@
+||myip.ipip.net
+||livew.l.qq.com
+||vd.l.qq.com
+||vi.l.qq.com
+||v-56.com
+||xinruimz-isv.isvjcloud.com
+||acfun.cn
+||aixifan.com
+||acfun.com
+# > bilibili
+||acgvideo.com
+||snm0516.aisee.tv
+||biliapi.net
+||bilibili.com
+||bilivideo.com
+||hdslb.com
+||acg.tv
+||b23.tv
+||biligame.com
+||biligame.net
+||im9.com
+||biliapi.com
+# > Tencent Video
+||video.qq.com
+||i.qq.com
+||v.qq.com
+# > iQiyi
+||iqiyi.com
+||iqiyipic.com
+||qy.net
+||71edge.com
+# > Youku
+||soku.com
+||youku.com
+||ykimg.com
+ # > XiGua
+||ixigua.com
+||snssdk.com
+# > HunanTV
+||hitv.com
+||hunantv.com
+||mgtv.com
+# > Le
+||le.com
+# > PPLive
+||pplive.cn
+||pptv.com
+# > Sohu Video
+||sohu.com
+||sohu.com.cn
+||itc.cn
+# > Migu Video
+||cmvideo.cn
+||migu.cn
+||miguvideo.com
