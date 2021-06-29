@@ -7,7 +7,6 @@ xinruimz-isv.isvjcloud.com
 acfun.cn
 aixifan.com
 acfun.com
-# > bilibili
 acgvideo.com
 snm0516.aisee.tv
 biliapi.net
@@ -20,36 +19,27 @@ biligame.com
 biligame.net
 im9.com
 biliapi.com
-# > Tencent Video
 video.qq.com
 i.qq.com
 v.qq.com
-# > iQiyi
 iqiyi.com
 iqiyipic.com
 qy.net
 71edge.com
-# > Youku
 soku.com
 youku.com
 ykimg.com
- # > XiGua
 ixigua.com
 snssdk.com
-# > HunanTV
 hitv.com
 hunantv.com
 mgtv.com
-# > Le
 le.com
-# > PPLive
 pplive.cn
 pptv.com
-# > Sohu Video
 sohu.com
 sohu.com.cn
 itc.cn
-# > Migu Video
 cmvideo.cn
 migu.cn
 miguvideo.com
