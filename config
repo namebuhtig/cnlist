@@ -9,7 +9,7 @@ proxies:
 - name: jia
   type: ss
   server: 10.10.10.2
-  port: 11532
+  port: 11533
   cipher: aes-128-gcm
   password: '111111'
   udp: false
