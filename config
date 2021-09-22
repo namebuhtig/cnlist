@@ -56,6 +56,8 @@ rules:
  - DOMAIN-SUFFIX,video.qq.com,Proxy
  - DOMAIN-SUFFIX,i.qq.com,Proxy
  - DOMAIN-SUFFIX,v.qq.com,Proxy
+ - DOMAIN-SUFFIX,v.smtcdns.com,Proxy
+ - DOMAIN-SUFFIX,vv.video.qq.com,Proxy
 # > iQiyi
  - DOMAIN-SUFFIX,iqiyi.com,Proxy
  - DOMAIN-SUFFIX,iqiyipic.com,Proxy
