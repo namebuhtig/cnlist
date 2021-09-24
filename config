@@ -22,7 +22,7 @@ proxy-groups:
 - name: Others
   type: select
   proxies:
-  - Proxy
+  - jia
   - DIRECT
 rules:
  - DOMAIN-KEYWORD,tracker,DIRECT
