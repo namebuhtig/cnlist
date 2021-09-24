@@ -1,0 +1,91 @@
+---
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: silent
+external-controller: 0.0.0.0:9090
+proxies:
+- name: jia
+  type: ss
+  server: 10.10.10.2
+  port: 11533
+  cipher: aes-128-gcm
+  password: '111111'
+  udp: false
+proxy-groups:
+- name: Proxy
+  type: select
+  proxies:
+  - jia
+  - DIRECT
+rules:
+ - DOMAIN-KEYWORD,tracker,DIRECT
+ - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
+ - DOMAIN-KEYWORD,torrent,DIRECT
+ - DOMAIN-KEYWORD,peer_id=,DIRECT
+ - DOMAIN-KEYWORD,info_hash,DIRECT
+ - DOMAIN-KEYWORD,get_peers,DIRECT
+ - DOMAIN-KEYWORD,find_node,DIRECT
+ - DOMAIN-KEYWORD,BitTorrent,DIRECT
+ - DOMAIN-KEYWORD,announce_peer,DIRECT
+ - DOMAIN,myip.ipip.net,Proxy
+ - DOMAIN-SUFFIX,livew.l.qq.com,Proxy
+ - DOMAIN-SUFFIX,vd.l.qq.com,Proxy
+ - DOMAIN-SUFFIX,vi.l.qq.com,Proxy
+ - DOMAIN-SUFFIX,v-56.com,Proxy
+ - DOMAIN-SUFFIX,xinruimz-isv.isvjcloud.com,Proxy
+# > Acfun
+ - DOMAIN-SUFFIX,acfun.cn,Proxy
+ - DOMAIN-SUFFIX,aixifan.com,Proxy
+ - DOMAIN-SUFFIX,acfun.com,Proxy
+# > bilibili
+ - DOMAIN-SUFFIX,acgvideo.com,Proxy
+ - DOMAIN-SUFFIX,snm0516.aisee.tv,Proxy
+ - DOMAIN-SUFFIX,biliapi.net,Proxy
+ - DOMAIN-SUFFIX,bilibili.com,Proxy
+ - DOMAIN-SUFFIX,bilivideo.com,Proxy
+ - DOMAIN-SUFFIX,hdslb.com,Proxy
+ - DOMAIN-SUFFIX,acg.tv,Proxy
+ - DOMAIN-SUFFIX,b23.tv,Proxy
+ - DOMAIN-SUFFIX,biligame.com,Proxy
+ - DOMAIN-SUFFIX,biligame.net,Proxy
+ - DOMAIN-SUFFIX,im9.com,Proxy
+ - DOMAIN-SUFFIX,biliapi.com,Proxy
+# > Tencent Video
+ - DOMAIN-SUFFIX,video.qq.com,Proxy
+ - DOMAIN-SUFFIX,i.qq.com,Proxy
+ - DOMAIN-SUFFIX,v.qq.com,Proxy
+ - DOMAIN-SUFFIX,v.smtcdns.com,Proxy
+ - DOMAIN-SUFFIX,vv.video.qq.com,Proxy
+# > iQiyi
+ - DOMAIN-SUFFIX,iqiyi.com,Proxy
+ - DOMAIN-SUFFIX,iqiyipic.com,Proxy
+ - DOMAIN-SUFFIX,qy.net,Proxy
+ - DOMAIN-SUFFIX,71edge.com,Proxy
+# > Youku
+ - DOMAIN-SUFFIX,soku.com,Proxy
+ - DOMAIN-SUFFIX,youku.com,Proxy
+ - DOMAIN-SUFFIX,ykimg.com,Proxy
+ # > XiGua
+ - DOMAIN-SUFFIX,ixigua.com,Proxy
+ - DOMAIN-SUFFIX,snssdk.com,Proxy
+# > HunanTV
+ - DOMAIN-SUFFIX,hitv.com,Proxy
+ - DOMAIN-SUFFIX,hunantv.com,Proxy
+ - DOMAIN-SUFFIX,mgtv.com,Proxy
+# > Le
+ - DOMAIN-SUFFIX,le.com,Proxy
+# > PPLive
+ - DOMAIN-SUFFIX,pplive.cn,Proxy
+ - DOMAIN-SUFFIX,pptv.com,Proxy
+# > Sohu Video
+ - DOMAIN-SUFFIX,sohu.com,Proxy
+ - DOMAIN-SUFFIX,sohu.com.cn,Proxy
+ - DOMAIN-SUFFIX,itc.cn,Proxy
+# > Migu Video
+ - DOMAIN-SUFFIX,cmvideo.cn,Proxy
+ - DOMAIN-SUFFIX,migu.cn,Proxy
+ - DOMAIN-SUFFIX,miguvideo.com,Proxy
+ - GEOIP,CN,Proxy
+ - MATCH,DIRECT
