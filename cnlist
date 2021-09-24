@@ -87,5 +87,3 @@ rules:
  - DOMAIN-SUFFIX,cmvideo.cn,Proxy
  - DOMAIN-SUFFIX,migu.cn,Proxy
  - DOMAIN-SUFFIX,miguvideo.com,Proxy
- - GEOIP,CN,Proxy
- - MATCH,DIRECT
