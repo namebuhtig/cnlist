@@ -1,30 +1,31 @@
+---
 proxies:
-  - name: "china"
-    type: ss
-    server: "10.10.10.2"
-    port: 11533
-    cipher: aes-128-gcm
-    password: "111111"
-    udp: false
+- name: china
+  type: ss
+  server: 10.10.10.2
+  port: 11533
+  cipher: aes-128-gcm
+  password: '111111'
+  udp: false
 proxy-groups:
-  - name: Auto - UrlTest
-    type: url-test
-    proxies:
-      - "china"
-    url: https://cp.cloudflare.com/generate_204
-    interval: "600"
-    tolerance: "150"
-  - name: Proxy
-    type: select
-    proxies:
-      - Auto - UrlTest
-      - DIRECT
-      - "china"
-  - name: Others
-    type: select
-    proxies:
-      - Proxy
-      - DIRECT
+- name: Auto - UrlTest
+  type: url-test
+  proxies:
+  - china
+  url: https://cp.cloudflare.com/generate_204
+  interval: '600'
+  tolerance: '150'
+- name: Proxy
+  type: select
+  proxies:
+  - Auto - UrlTest
+  - DIRECT
+  - china
+- name: Others
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
 rules:
  - DOMAIN-KEYWORD,tracker,DIRECT
  - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
