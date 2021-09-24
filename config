@@ -19,6 +19,11 @@ proxy-groups:
   proxies:
   - jia
   - DIRECT
+- name: Others
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
 rules:
  - DOMAIN-KEYWORD,tracker,DIRECT
  - DOMAIN-KEYWORD,announce.php?passkey=,DIRECT
@@ -87,3 +92,5 @@ rules:
  - DOMAIN-SUFFIX,cmvideo.cn,Proxy
  - DOMAIN-SUFFIX,migu.cn,Proxy
  - DOMAIN-SUFFIX,miguvideo.com,Proxy
+ - GEOIP,CN,Proxy
+ - MATCH,Others
