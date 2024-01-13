@@ -67,7 +67,7 @@ fi
 if [ $1 ]; then
 if [ $1 == 'host' ]; then
 	if [ ! -s /etc/xiaoya/docker_address.txt ]; then
-		echo "http://$localip:5678" > /etc/xiaoya/docker_address.txt
+		echo "http://$localip:6789" > /etc/xiaoya/docker_address.txt
 	fi	
 	docker stop xiaoya 2>/dev/null
 	docker rm xiaoya 2>/dev/null
